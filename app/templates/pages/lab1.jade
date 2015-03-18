@@ -1,0 +1,39 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Лабораторная 1';
+
+block content
+	+script(['lab1.js'])
+
+	.lab-title 
+		| Лабораторная работа №1:
+		br
+		| Прямые методы решения систем линейных алгебраических уравнений
+
+	.lab1
+		input.lab1-input(data-row=0 data-col=0 value=2.74)
+		input.lab1-input(data-row=0 data-col=1 value=-1.18)
+		input.lab1-input(data-row=0 data-col=2 value=3.17)
+		input.lab1-input(data-row=0 data-col=3 value=2.18)
+		span.lab1-x
+			| x1 = 
+			span(data-x=1) N/A
+		br
+		input.lab1-input(data-row=1 data-col=0 value=1.12)
+		input.lab1-input(data-row=1 data-col=1 value=0.83)
+		input.lab1-input(data-row=1 data-col=2 value=-2.16)
+		input.lab1-input(data-row=1 data-col=3 value=-1.15)
+		span.lab1-x
+			| x2 = 
+			span(data-x=2) N/A
+		br
+		input.lab1-input(data-row=2 data-col=0 value=0.81)
+		input.lab1-input(data-row=2 data-col=1 value=1.27)
+		input.lab1-input(data-row=2 data-col=2 value=0.76)
+		input.lab1-input(data-row=2 data-col=3 value=3.23)
+		span.lab1-x
+			| x3 = 
+			span(data-x=3) N/A
+		br
+		button.lab1-btn.js-btn start

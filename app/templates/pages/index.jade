@@ -1,7 +1,12 @@
 extends ../layouts/default
 
 block head
-	- pageTitle = 'CSSSR Project Template';
+	- pageTitle = 'Числовые методы';
 
 block content
-	include ../blocks/main
+	.index
+		a.index__link(href='lab1.html') Лабораторная работа №1
+
+		.index__author
+			| Выполнил Антон Берсенёв, ВМИ-201
+	//include ../blocks/main
