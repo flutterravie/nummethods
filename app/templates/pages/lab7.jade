@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Лабораторная 7';
+
+block content
+	+script(['lab7.js'])
+
+	.lab-title 
+		| Лабораторная работа №1:
+		br
+		| Численное интегрирование
+
+	.lab7
+		.lab7-item
+			label.lab7-label Нижний предел
+			input.lab7-input.js-down-limit(value=-1)
+		.lab7-item
+			label.lab7-label Верхний предел
+			input.lab7-input.js-up-limit(value=1)
+		.lab7-item
+			label.lab7-label Шаг интегрирования
+			input.lab7-input.js-step(value=0.5)
+
+		.lab7-sum.js-sum
+
+		button.lab7-btn.js-start Start
