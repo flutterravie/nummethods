@@ -1,15 +1,15 @@
 extends ../layouts/default
 
 block head
-	- pageTitle = 'Лабораторная 2';
+	- pageTitle = 'Лабораторная 3';
 
 block content
-	+script(['lab2.js'])
+	+script(['lab3.js'])
 
 	.lab-title 
-		| Лабораторная работа №2:
+		| Лабораторная работа №3:
 		br
-		| Итерационные методы решения систем линейных уравнений
+		| Решение нелинейных уравнений
 
 	.lab2
 		input.lab2-input(data-col=0 value=-0.36)

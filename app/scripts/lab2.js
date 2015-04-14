@@ -10,12 +10,11 @@ $(function () {
 
 	// arr[столбец]
 
-	for (var i = 0; i < colCount; i++) {
-		numArray[i] = parseFloat($('input[data-col=' + i + ']').val());
-		steps = parseFloat($('input[data-col=4]').val());
-	}
-
 	$('.js-btn').on('click', function () {
+		for (var i = 0; i < colCount; i++) {
+			numArray[i] = parseFloat($('input[data-col=' + i + ']').val());
+		}
+		steps = parseFloat($('input[data-col=4]').val());
 		for (var k = 0; k < steps; k++) {
 			oldArray[0] = numArray[0];
 			oldArray[1] = numArray[1];
@@ -25,8 +24,8 @@ $(function () {
 			numArray[1] = ((0.45 * oldArray[0]) + (-0.23 * oldArray[2]) + (0.07 * oldArray[3]) + 0.33);
 			numArray[2] = ((0.10185 * oldArray[0]) + (0.72222 * oldArray[3]) - 0.78703);
 			numArray[3] = ((0.10126 * oldArray[0]) + (0.11392 * oldArray[1]) + (0.41772 * oldArray[2]) + 2.15189);
+			$('.js-log').append('<div>x1='+numArray[0].toFixed(5)+', x2='+numArray[1].toFixed(5)+', x3='+numArray[2].toFixed(5)+', x4='+numArray[3].toFixed(5));
 		}
-		console.log(numArray);
 		$('input[data-col=0]').val(((0.79 * numArray[0])+(-0.31 * numArray[1])+(0.72 * numArray[3])).toFixed(5));
 		$('input[data-col=1]').val(((-0.56 * numArray[0])+(1 * numArray[1])+(1.31 * numArray[2])+(-0.85 * numArray[3])).toFixed(5));
 		$('input[data-col=2]').val(((-0.11 * numArray[0])+(1.08 * numArray[2])+(-0.78 * numArray[3])).toFixed(5));
