@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Лабораторная 5';
+
+block content
+	+script(['lab5.js'])
+
+	.lab-title 
+		| Лабораторная работа №5:
+		br
+		| Интерполирование алгебраическими многочленами
+
+	.lab5
+
+		.lab5-text Начальное приближение
+		span x=
+		input.js-x(value=0.5)
+		br
+		span y=
+		input.js-y(value=-0.2)
+		
+		br
+		button.lab5-btn.js-start Start

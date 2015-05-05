@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Лабораторная 4';
+
+block content
+	+script(['lab4.js'])
+
+	.lab-title 
+		| Лабораторная работа №4:
+		br
+		| Итерационные методы решения систем нелинейных уравнений
+
+	.lab4
+
+		.lab4-text Начальное приближение
+		span x=
+		input.js-x(value=0.5)
+		br
+		span y=
+		input.js-y(value=-0.2)
+		br
+		.js-output
+		
+		br
+		button.lab4-btn.js-btn Start
