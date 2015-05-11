@@ -1,0 +1,63 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Лабораторная 6';
+
+block content
+	+script(['lab6.js'])
+
+	.lab-title 
+		| Лабораторная работа №6:
+		br
+		| Интерполирование сплайнами
+
+	.lab6-header
+		span a
+		span b
+		span c
+		span d
+		span x
+
+	br
+
+	.lab1
+		input.lab1-input(data-row=0 data-col=0 value=1.1052)
+		input.lab1-input(data-row=0 data-col=1)
+		input.lab1-input(data-row=0 data-col=2)
+		input.lab1-input(data-row=0 data-col=3)
+		input.lab1-input(data-row=0 data-col=4 value=0.1)
+		br
+		input.lab1-input(data-row=1 data-col=0 value=1.1618)
+		input.lab1-input(data-row=1 data-col=1)
+		input.lab1-input(data-row=1 data-col=2)
+		input.lab1-input(data-row=1 data-col=3)
+		input.lab1-input(data-row=1 data-col=4 value=0.15)
+		br
+		input.lab1-input(data-row=2 data-col=0 value=1.2092)
+		input.lab1-input(data-row=2 data-col=1)
+		input.lab1-input(data-row=2 data-col=2)
+		input.lab1-input(data-row=2 data-col=3)
+		input.lab1-input(data-row=2 data-col=4 value=0.19)
+		br
+		input.lab1-input(data-row=3 data-col=0 value=1.2840)
+		input.lab1-input(data-row=3 data-col=1)
+		input.lab1-input(data-row=3 data-col=2)
+		input.lab1-input(data-row=3 data-col=3)
+		input.lab1-input(data-row=3 data-col=4 value=0.25)
+		br
+		input.lab1-input(data-row=4 data-col=0 value=1.3231)
+		input.lab1-input(data-row=4 data-col=1)
+		input.lab1-input(data-row=4 data-col=2)
+		input.lab1-input(data-row=4 data-col=3)
+		input.lab1-input(data-row=4 data-col=4 value=0.28)
+		br
+		input.lab1-input(data-row=5 data-col=0 value=1.3499)
+		input.lab1-input(data-row=5 data-col=1)
+		input.lab1-input(data-row=5 data-col=2)
+		input.lab1-input(data-row=5 data-col=3)
+		input.lab1-input(data-row=5 data-col=4 value=0.3)
+		br
+		button.lab1-btn.js-btn start
+		br
+		br
+		.js-log
